@@ -1,0 +1,114 @@
+@import "font";
+@import "screen-size-mixin";
+@import "colours";
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+.index-contents {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 0 10px;
+
+    main {
+        position: relative;
+        height: calc(100vh - 83px);
+        width: 100%;
+
+        .header-section {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            padding: 0 10%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            color: white;
+            text-align: left;
+
+            @include md {
+                padding: 0 20%;
+            }
+
+            .title {
+                font-family: 'Niconne', cursive;
+                text-transform: capitalize;
+                font-size: 4rem;
+                margin: 0 0 20px;
+
+                @include md {
+                    font-size: 8rem;
+                }
+            }
+            .description {
+                font-family: $serif;
+            }
+        }
+
+        #slideshow {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+    
+            .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .slide-1 {
+                background:         
+                linear-gradient(
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.6)), 
+                url(/asset/images/6.jpg)
+                no-repeat
+                center;
+                background-size: cover;
+            }
+            .slide-2 {
+                background:         
+                linear-gradient(
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.6)), 
+                url(/asset/images/2.jpg)
+                no-repeat
+                center;
+                background-size: cover;
+            }
+            .slide-3 {
+                background:         
+                linear-gradient(
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.6)), 
+                url(/asset/images/3.jpg)
+                no-repeat
+                center;
+                background-size: cover;
+            }
+            .slide-4 {
+                background:         
+                linear-gradient(
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.6)), 
+                url(/asset/images/4.jpg)
+                no-repeat
+                center;
+                background-size: cover;
+            }
+            .slide-5 {
+                background:         
+                linear-gradient(
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.6)), 
+                url(/asset/images/5.jpg)
+                no-repeat
+                center;
+                background-size: cover;
+            }
+        }
+    }
+}

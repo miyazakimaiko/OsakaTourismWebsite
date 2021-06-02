@@ -1,0 +1,163 @@
+//=========================================
+//                HEADER
+//=========================================
+header {
+    .header-container {
+        display: flex;
+        padding: 10px;
+        .header-logo-container {
+            a {
+                display: flex;
+                .logo {
+                    .logo-image {
+                        width: 50px;
+                        height: 50px;
+                        padding-right: 5px;
+                    }
+                }
+                .title {
+                    margin: auto;
+
+                    font-family: $serif;
+                }
+            }
+        }
+        .header-nav-container {
+            margin: 0 0 0 auto;
+
+            .header-nav {
+                display: none;
+                height: 100%;
+
+                @include lg {
+                    display: block;
+                }
+                .nav-link-list {
+                    display: flex;
+                    height: 100%;
+
+                    .nav-link {
+                        margin: auto;
+
+                        a {
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-button-container {
+            position: relative;
+            width: 33px;
+            height: 27px;
+            margin: auto 0 auto auto;
+            cursor: pointer;
+
+            @include lg {
+                display: none;
+            }
+
+            .opened-button {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                .bar {
+                    height: 3px;
+                    width: 100%;
+                    background-color: $main-text-colour;
+                }
+                .bar1 {
+                   margin-top: 0;
+                }
+                .bar2 {
+                    margin-top: 9px;
+                }
+                .bar3 {
+                    margin-top: 9px;
+                }
+            }
+            .closed-button {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                .bar {
+                    height: 3px;
+                    width: 100%;
+                    background-color: $main-text-colour;
+                }
+                .bar1 {
+                    margin-top: 12px;
+                    transform: rotate(45deg);
+                }
+                .bar2 {
+                    margin-top: -3px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+//=========================================
+// NAVIGATION AREA (ONLY FOR MOBILE SIZE)
+//=========================================
+
+.large-nav-container {
+    display: none;
+
+    @include lg {
+        display: none !important;
+    }
+
+    background-color: $main-colour-light;
+    .large-nav {
+        .nav-link-list {
+            .nav-link {
+                padding: 20px;
+                border-bottom: 1px dashed;
+
+                &:first-child {
+                    border-top: 1px solid;
+                }
+                &:last-child {
+                    border-bottom: 1px solid;
+                }
+            }
+        }
+    }
+}
+
+//=========================================
+//               CONTENTS
+//=========================================
+
+.contents {
+    padding: 0 10px 400px; // padding-bottom to have space for footer when contents are small
+
+    @include md {
+        padding-bottom: 200px;
+    }
+    main {
+        .header-section {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            .title {
+                margin: 40px 0;
+                font-size: 2em;
+                text-transform: uppercase;
+
+                @include md {
+                    margin: 60px 0;
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+}

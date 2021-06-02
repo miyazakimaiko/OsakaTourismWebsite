@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="../asset/logo/logo.svg">
+<link rel="stylesheet" href="../library/css/common.css">
+<link rel="stylesheet" href="../library/css/index.css">
+<title>Osaka - Osaka Tourism Website</title>
+<meta name="description" content="A never-ending maze to visitors">
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <!-- logo section -->
+        <div class="header-logo-container">
+            <a href="/index.html">
+                <h1 class="logo"><img class="logo-image" src="../asset/logo/logo.svg" alt="Osaka Tourism Website Logo"></h1>
+                <h1 class="title">Osaka City</h1>
+            </a>
+        </div>
+
+        <!-- nav links section (Medium screen or larger only) -->
+        <div class="header-nav-container">
+            <nav class="header-nav">
+                <ul class="nav-link-list">
+                    <li class="nav-link"><a href="/index.html">Home</a></li>
+                    <li class="nav-link"><a href="/about-osaka.html">About Osaka</a></li>
+                    <li class="nav-link"><a href="/where-to-visit.html">Where to Visit</a></li>
+                    <li class="nav-link"><a href="/traditional-events.html">Traditional Events</a></li>
+                    <li class="nav-link"><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- menu button (Mobile size screen only) -->
+        <div class="menu-button-container" onclick="OpenNavigation()">
+            <div id="opened-button" class="opened-button">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <div id="closed-button" class="closed-button">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- navivation area for mobile to medium screen sizes -->
+<div id="large-nav-container" class="large-nav-container">
+    <nav class="large-nav">
+        <ul class="nav-link-list">
+            <li class="nav-link"><a href="/index.html">Home</a></li>
+            <li class="nav-link"><a href="/about-osaka.html">About Osaka</a></li>
+            <li class="nav-link"><a href="/where-to-visit.html">Where to Visit</a></li>
+            <li class="nav-link"><a href="/traditional-events.html">Traditional Events</a></li>
+            <li class="nav-link"><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- contents -->
+<div class="contents index-contents">
+    <main>
+        <div class="header-section">
+            <h1 class="title">Osaka</h1>
+            <p class="description">A never-ending maze to visitors</p>
+
+        </div><!-- .header-section end -->
+
+        <div id="slideshow" onload="StartSlider()">
+            <div class="slide-1 slide"></div>
+            <div class="slide-2 slide"></div>
+            <div class="slide-3 slide"></div>
+            <div class="slide-4 slide"></div>
+            <div class="slide-5 slide"></div>
+        </div>
+
+    </main>
+</div><!-- .contents end -->
+
+<script src="../library/js/navigation.js"></script>
+<script src="../library/js/jquery-3.6.0.min.js"></script>
+<script src="../library/js/slideshow.js"></script>
+</body>
+</html>

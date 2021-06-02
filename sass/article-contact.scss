@@ -1,0 +1,57 @@
+@import "font";
+@import "screen-size-mixin";
+@import "colours";
+
+article {
+    max-width: 768px;
+    margin: 0 auto;
+
+    .parent-section {
+        margin-top: 70px;
+
+        @include md {
+            margin-top: 100px;
+        }
+
+        .contact-form {
+            width: 100%;
+            .input-wrapper {
+                width: 100%;
+                padding-bottom: 20px;
+
+                label {
+                    display: inline-block;
+                    width: calc(100% - 10px);
+
+                    @include md {
+                        width: calc(30% - 20px);                
+                    }
+                }
+                input {
+                    width: calc(100% - 10px);
+                    @include md {
+                        width: 70%;
+                    }
+                }
+            }
+            .message-wrapper {
+                width: 100%;
+                label {
+                    width: calc(100% - 10px);
+                }
+                textarea {
+                    width: calc(100% - 10px);
+                    height: 300px;
+                }
+            }
+            .button-wrapper {
+                width: 100%;
+                input {
+                    margin: 20px 0 0 auto;
+                    padding: 10px 30px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

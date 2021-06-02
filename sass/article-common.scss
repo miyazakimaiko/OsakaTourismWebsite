@@ -1,0 +1,180 @@
+@import "font";
+@import "screen-size-mixin";
+@import "colours";
+
+.header-section {
+    .thumbnail {
+        width: 100%;
+        height: 200px;
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include sm {
+            height: 40vw;
+            max-height: 480px;
+        }
+
+        @include md {
+            margin-top: 60px;
+        }
+    }
+    .image-1 {
+        background-image: url(/asset/images/1.jpg);
+    }
+    .image-2 {
+        background-image: url(/asset/images/2.jpg);
+    }
+    .image-3 {
+        background-image: url(/asset/images/3.jpg);
+    }
+    .image-4 {
+        background-image: url(/asset/images/4.jpg);
+    }
+    .image-5 {
+        background-image: url(/asset/images/5.jpg);
+    }
+    .image-6 {
+        background-image: url(/asset/images/6.jpg);
+    }
+    .image-7 {
+        background-image: url(/asset/images/7.jpg);
+    }
+    .image-8 {
+        background-image: url(/asset/images/8.jpg);
+    }
+    .image-event-1 {
+        background-image: url(/asset/images/ishikiri-tsurugiya-shrine-spring-festival.jpg);
+    }
+}
+
+article {
+    max-width: 768px;
+    margin: 0 auto;
+
+    .parent-section {
+        margin-top: 70px;
+
+        @include md {
+            margin-top: 100px;
+        }
+
+        .section-title {
+            font-family: $sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 1.5em;
+
+            @include md {
+                font-size: 2.5em;
+            }
+
+            &:after {
+                content: "";
+                height: 6px;
+                width: 50%;
+                margin: 15px 0;
+                display: block;
+                border-radius: 5px;
+                background-color: $main-colour-dark;
+
+                @include md {
+                    margin: 25px 0;
+                }
+            }
+        }
+
+        .child-section {
+            margin-top: 20px;
+
+            @include md {
+                margin-top: 30px;;
+            }
+        }
+
+        h3 {
+            font-size: 1.2em;
+            padding: 20px 0;
+
+            @include md {
+                font-size: 1.7em;
+                padding: 30px 0;
+            }
+        }
+        p {
+            margin-bottom: 25px;
+        }
+        .section-image {
+            height: auto;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        //==================================
+        // FAQs
+        //==================================
+
+        .question {
+            font-weight: 400;
+            &:before {
+                content: "Q: ";
+            }
+        }
+
+        .answer {
+            &:before {
+                content: "A: ";
+            }
+        }
+
+        //==================================
+        // Tables
+        //==================================
+
+        table {
+            width: 100%;
+            tbody {
+                width: 100%;
+                tr {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom: 1px dashed;
+                    padding: 10px 0;
+
+                    @include md {
+                        flex-direction: row;
+                    }
+                    th {
+                        text-transform: uppercase;
+                        text-align: left;
+                        @include md {
+                            width: 170px;
+                        }
+                    }
+                    td {
+                        font-weight: 300;
+                        @include md {
+                            width: calc(100% - 170px);
+                        }
+                    }
+                }
+            }
+        }
+
+        //==================================
+        // GOOGLE MAP
+        //==================================
+
+        .google-map {
+            width: 100%;
+            height: 300px;
+            margin-top: 30px;
+
+            @include md {
+                height: 500px;
+            }
+        }
+    }
+}

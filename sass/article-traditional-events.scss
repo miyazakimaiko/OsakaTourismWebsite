@@ -1,0 +1,129 @@
+@import "font";
+@import "screen-size-mixin";
+@import "colours";
+
+article {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .parent-section {
+        margin-top: 70px;
+
+        @include md {
+            margin-top: 100px;
+        }
+
+        .section-title {
+            font-family: $sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            text-align: center;
+
+            @include md {
+                font-size: 2.5em;
+            }
+
+            &:after {
+                content: "";
+                height: 6px;
+                width: 50%;
+                margin: 15px auto;
+                display: block;
+                border-radius: 5px;
+                background-color: $main-colour-dark;
+
+                @include md {
+                    width: 150px;
+                    margin: 25px auto;
+                }
+            }
+        }
+
+        .event-list-container {
+            .event-list {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .event-link {
+                    height: 200px;
+                    width: 100%;
+                    max-width: 313px;
+                    padding: 10px;
+
+                    &:hover a {
+                        background-size: 120%;
+                    }
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        transition: all .3s ease;
+
+                        background-size: 100%;
+                        background-position: center;
+
+                        position: relative;
+
+                        p {
+                            position: absolute;
+                            bottom: 5px;
+                            left: 10px;
+                            right: 10px;
+
+                            color: white;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .spring-event-1 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/ishikiri-tsurugiya-shrine-spring-festival.jpg);
+                }
+                .spring-event-2 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/nakami-shrine-harumatsuri-nakami-no-sato-spring-cultural-festival.jpg);
+                }
+                .spring-event-3 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/hiyoshi-shrine-ogomasaitou-gyoji-ritual.jpg);
+                }
+                .spring-event-4 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/osaka-temmangu-shrine-chinka-sai-festival.jpg);
+                }
+                .spring-event-5 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/sumiyoshi-taisha-matsunae-shinji-ritual.jpg);
+                }
+                .spring-event-6 {
+                    background:         
+                    linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgba(0, 0, 0, 0.6)), 
+                    url(/asset/images/osaka-temmangu-shrine-tenma-tenjin-umematsuri-plum-blossom-festival.jpg);
+                }
+            }
+        }
+
+    }
+}

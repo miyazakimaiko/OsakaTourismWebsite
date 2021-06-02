@@ -1,0 +1,46 @@
+<% title = 'Contact'; %>
+<% description = "If you have any questions, please contact us by submitting the form below."; %>
+<% path = '..'; %>
+<% uniqueCss = 'article-contact' %>
+
+<%- include('_common/header') %>
+
+        </div><!-- .header-section end -->
+
+        <article>
+            <section class="parent-section">
+                <form action="" class="contact-form">
+                        <div class="input-wrapper">
+                            <label for="fname">First Name</label>
+                            <input required="" type="text" class="sm-input" id="fname" name="firstname" pattern="[a-zA-Z0-9]+" title="Only uppercase/lowercase letters and numbers are accepted in this field.">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="lname">Last Name</label>
+                            <input required="" type="text" class="sm-input" id="lname" name="lastname" pattern="[a-zA-Z0-9]+" title="Only uppercase/lowercase letters and numbers are accepted in this field.">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="number">Phone Number</label>
+                            <input required="" type="text" class="sm-input" id="number" name="phonenumber" pattern="[0-9]+" title="Only numbers are accepted in this field.">
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <label for="email">Email Address</label>
+                            <input required="" type="email" class="sm-input" id="email" name="email">
+                        </div>
+
+                        <div class="message-wrapper">
+                            <label for="feedback">Message</label>
+                            <textarea required="" id="feedback" class="lg-input" name="subject"></textarea>
+                        </div>
+                    
+                        <div class="button-wrapper">
+                            <input type="submit" class="submit-btn" id="submit" value="Submit">
+                        </div>
+                </form>
+            </section>
+    </article>
+
+<%- include('_common/footer') %>
+
